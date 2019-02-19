@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MUSIC TRIVIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="MUSIC TRIVIA.css" />
+    </head>
+<body>
+    <div id="usuario">
+     <header>
+            <div class="title" >MUSIC TRIVIA </div> 
+            <div class="bienvenido" >
+            <marquee> Bienvenid@ </marquee> 
+            </div> 
+            <div class="pregunta" class="caja"> 
+                 <p style="color:black" id="showMessage"> ¿Cual es tu nombre? </p>
+                 <input id="name" value=" " type="text" class="nick"> 
+            </div> <br>
+          <button  class="continue" style="background-color: slateblue" onclick="continuar()"> Continuar </button>  
+             
+    </header>
+    </div>
+    <div id="pagina2">
+          <h1 class="title"> QUE TAL
+                    <span id="nick2"> </span>
+                    </h1>
+                            <p class="pregunta">
+                                ¿Qué tanto sabes de la música? <br>
+                               VAMOS!!! Elige el tema de tu agrado:
+                            </p>
+                             <button class="rock" onclick="rock()"> QUEEN </button>
+                             <button class="salsa" onclick="salsa()"> SALSA </button> 
+    </div>
+    <div id="pagina3">
+          <form>
+                    <fieldset>
+                    <legend>1.- ¿En qué año se formó la agrupación QUEEN?</legend> <br>
+                    <label>
+                       <input type="radio" class="question" name="queen1" value="respuesta11" id="r11"> 1978 <br>
+                    </label> <br>
+                    <label>
+                        <input type="radio" class="question" name="queen1" value="respuesta12" id="r12"> 1970 <br>
+                    </label> <br>
+                    <label>
+                        <input type="radio" class="question" name="queen1" value="respuesta13" id="r13"> 1987 <br>
+                    </label>
+                    </fieldset>
+                    <fieldset>
+                    <legend>2.- ¿Bohemian Rhapsody cuando se lanzó?</legend> <br>
+                    <label>
+                        <input type="radio" class="question" name="queen2" value="respuesta14" id="r14"> 1975 <br>
+                    </label> <br>
+                    <label>
+                        <input type="radio" class="question" name="queen2" value="respuesta15" id="r15"> 1972 <br>
+                    </label> <br>
+                    <label>
+                        <input type="radio" class="question" name="queen2" value="respuesta16" id="r16"> 1979 <br>
+                    </label>
+                    </fieldset>
+                    <fieldset>
+                            <legend>3.- ¿Cuántos discos tiene la banda QUEEN?</legend> <br>
+                            <label>
+                                <input type="radio" class="question" name="queen3" value="respuesta17" id="r17"> 10 <br>
+                            </label> <br>
+                            <label>
+                                <input type="radio" class="question" name="queen3" value="respuesta18" id="r18">  12 <br>
+                            </label> <br>
+                            <label>
+                                <input type="radio" class="question" name="queen3" value="respuesta19" id="r19"> 14 <br>
+                           </label>
+                    </fieldset>
+                </form> <br>
+        
+                       <button id="btnRock" class="resultado" onclick="result()">
+                           RESULTADO
+                       </button>
+        </div>
+        <div id="pagina4">
+               <form>
+                         <fieldset>
+                             <div>
+                         <legend>1.- ¿En qué año llegó al Perú El Gran Combo de Puerto Rico?</legend> <br>
+                         <label>
+                            <input type="radio" name="combo1" value="respuesta21" id="r21"> 1970 <br>
+                         </label> <br>
+                         <label>
+                             <input type="radio" name="combo1" value="respuesta22" id="r22"> 1979 <br>
+                         </label> <br>
+                         <label>
+                             <input type="radio" name="combo1" value="respuesta23" id="r23"> 1997 <br>
+                         </label>
+                             </div>
+                         </fieldset>
+                         <fieldset >
+                             <div>
+                         <legend>2.- ¿Cómo se llama la canción que El Gran Como dedicó al Perú?</legend> <br>
+                         <label>
+                             <input type="radio" name="combo2" value="respuesta24" id="r24"> 50 Aniversario <br>
+                         </label> <br>
+                         <label>
+                             <input type="radio" name="combo2" value="respuesta25" id="r25"> Jipi Jay <br>
+                         </label> <br>
+                         <label>
+                             <input type="radio" name="combo2" value="respuesta26" id="r26"> Callao Puerto Querido <br>
+                         </label>
+                             </div>
+                         </fieldset>
+                         <fieldset>
+                             <div>
+                                 <legend>3.- ¿Quién fué el último cantante principal de El Gran Combo de Puerto Rico?</legend> <br>
+                                 <label>
+                                     <input type="radio" name="combo3" value="respuesta27" id="r27"> Charlie Aponte <br>
+                                 </label> <br>
+                                 <label>
+                                     <input type="radio" name="combo3" value="respuesta28" id="r28"> Rafael Ithier <br>
+                                 </label> <br>
+                                 <label>
+                                     <input type="radio" name="combo3" value="respuesta29" id="r29"> Marcos Rodríguez “El Cacique” <br>
+                                 </label>
+                                 </div>
+                         </fieldset>
+                     </form> <br>
+                        <button id="btnSalsa" class="resultado" onclick="result()">
+                            RESULTADO
+                        </button>
+        </div>
+        <div id="pagina5">
+          <p class=title> ¡En Hora Buena!  </p>
+          <p id = "resultadototal" type="text" class="text"></p>
+          <div style="width: 330px; margin: 0 auto;"> </div>
+          <p class=pregunta> Sigue Intentando o Elige otra opción: <br></p>
+          <button class="rock1" onclick="rock();uncheckrock()"> QUEEN </button>
+          <button class="salsa1" onclick="salsa();unchecksalsa()"> EL GRAN COMBO </button> <br> <br> <br>
+          <button id="btnsalir" class="salir" onclick="cerrar()"> GAME OVER </button>
+        </div>
+    <script src="MUSIC TRIVIA.js"></script>
+</body>
+
+</html>
+
